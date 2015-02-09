@@ -1,4 +1,5 @@
 #!/bin/bash
+exit 1 # TODO: Setup when needed
 
 # Check if enough arguments have been given to the script.
 if [[ $# < 3 ]]; then
