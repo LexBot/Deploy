@@ -50,7 +50,7 @@ echo "Publishing artifacts..."
 # Run the specified command to build the Javadocs
 $command
 
-java -jar repoindexer.jar --localLocation $GIT_DIR
+java -jar $deploy_scripts/repoindexer.jar --localLocation $GIT_DIR
 
 echo "Successfully published artifacts, deploying to GitHub..."
 cd $GIT_DIR
