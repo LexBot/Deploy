@@ -25,6 +25,7 @@
 # git has its own built in compression methods.
 *.7z
 *.jar
+!repoindexer.jar
 *.rar
 *.zip
 *.gz
