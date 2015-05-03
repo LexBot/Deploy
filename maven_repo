@@ -50,7 +50,9 @@ echo "Publishing artifacts..."
 # Run the specified command to build the Javadocs
 $command
 
-#java -jar $deploy_scripts/repoindexer.jar --localLocation $GIT_DIR
+pip install -r requirements.txt
+
+python -m static_site_index.create_index $GIT_DIR
 
 echo "Successfully published artifacts, deploying to GitHub..."
 cd $GIT_DIR

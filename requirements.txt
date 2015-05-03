@@ -1,0 +1,1 @@
+static_site_index==0.1.0
