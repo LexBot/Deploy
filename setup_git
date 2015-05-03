@@ -13,9 +13,9 @@ set -e
 
 echo && echo "Initializing Git environment..."
 
-GIT_NAME="Lapislazuli"
-GIT_EMAIL="lapislazuli@lapis.blue"
-KEY_NAME=lapislazuli.pem
+GIT_NAME="LexBot"
+GIT_EMAIL="jamie.mansfield.jm@outlook.com"
+KEY_NAME=lexbot.pem
 
 # We don't need to set up anything if we don't have the passphrase
 [[ -z "$KEY_PASS" || ( -n "$TRAVIS_SECURE_ENV_VARS" && "$TRAVIS_SECURE_ENV_VARS" = "false" ) ]] && {

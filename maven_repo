@@ -9,7 +9,7 @@ if [[ $# < 1 ]]; then
 	exit 1
 fi
 
-GIT_REPO=${GIT_REPO:-"git@github.com:LapisBlue/Repo.git"}
+GIT_REPO=${GIT_REPO:-"git@github.com:jamierocks/Repo.git"}
 GIT_DIR=/tmp/deploy/repo
 
 # This is where I am.
@@ -18,8 +18,8 @@ deploy_scripts=$(dirname $0)
 # The command to execute that will publish the artifacts.
 command=$1
 
-# JDK to publish the artifacts with, Java 6 by default
-jdk=${2:-openjdk6}
+# JDK to publish the artifacts with, Java 7 by default
+jdk=${2:-oraclejdk7}
 
 # Ensure all commands complete successfully
 set -e
@@ -49,6 +49,8 @@ echo "Publishing artifacts..."
 
 # Run the specified command to build the Javadocs
 $command
+
+#java -jar $deploy_scripts/repoindexer.jar --localLocation $GIT_DIR
 
 echo "Successfully published artifacts, deploying to GitHub..."
 cd $GIT_DIR
