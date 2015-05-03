@@ -50,7 +50,7 @@ echo "Publishing artifacts..."
 # Run the specified command to build the Javadocs
 $command
 
-pip install -r requirements.txt
+pip install -r $deploy_scripts/requirements.txt
 
 python -m static_site_index.create_index $GIT_DIR
 
