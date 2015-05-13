@@ -50,9 +50,9 @@ echo "Publishing artifacts..."
 # Run the specified command to build the Javadocs
 $command
 
-pip install -r $deploy_scripts/requirements.txt
+#pip install -r $deploy_scripts/requirements.txt
 
-python -m static_site_index.create_index $GIT_DIR
+#python -m static_site_index.create_index $GIT_DIR
 
 echo "Successfully published artifacts, deploying to GitHub..."
 cd $GIT_DIR
