@@ -18,8 +18,8 @@ deploy_scripts=$(dirname $0)
 # The command to execute that will publish the artifacts.
 command=$1
 
-# JDK to publish the artifacts with, Java 7 by default
-jdk=${2:-oraclejdk7}
+# JDK to publish the artifacts with, Java 8 by default
+jdk=${2:-oraclejdk8}
 
 # Ensure all commands complete successfully
 set -e
